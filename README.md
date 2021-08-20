@@ -10,11 +10,17 @@ De manera que este programa inicialmente se enfocara en los miembros, subdivisio
 2) input (¿Que es lo que quieres?) (se tiene que typear las secciones que salen desplegads en el menu)
 3) if, else etc. (aqui se va a generar un algoritmo que procese el input)
   3.5)  Ej: 
+  
           NCT_info = grupo
+          
           info = str(input(...))
+          
           if info = "NCT"
+          
           print(NCT_info)
+          
       Este punto 3.5 se repetira de manera que procese todas las secciones a ofrecer 
+      
  4) se volvera a imprimir el input del punto 2 para que puedas volver a consultar.
     
    # Secciones: 
