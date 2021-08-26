@@ -38,4 +38,6 @@ De manera que este programa inicialmente se enfocara en los miembros, subdivisio
     Musica
       Albums
       
-       Title songs
+      Mini Albums
+      
+      Music Videos
