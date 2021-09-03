@@ -28,9 +28,15 @@ De manera que este programa inicialmente se enfocara en los miembros, subdivisio
     
       NCT U, NCT DREAM, NCT 127, WAYVE
       
+      Miembros en subdivision
+      
+      Miembros en que subdivision estan
+      
       
     Miembros
       23 miembros + nuevos mimbros (NCT HOLLYWOOD)
+      
+      Promedio de edad de cada subdivision
       
         Fancams sagradas
         
