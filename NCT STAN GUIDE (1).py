@@ -1,21 +1,55 @@
 """
 ********
 
-Programa de NCT (LAS OPERACIONES ESTAN JUNTO CON LAS FUNCIONES)
+Programa de NCT 
 
 ********
 """
 
-print("Buenas tardes usuario, para consultar nuestra información cheque el catalogo")
-print(
-    """
-    Subdivisiones:
+
+"""
+****
+Funciones (AQUI ESTAN LAS OPERACIONES ;) )
+****
+
+"""    
+def Suma1994_1995(Jy, Tl, Ty, Yt, K, Dy, T):
+    return Jy + Tl + Ty + Yt + K + Dy + T
+
+def Suma1997_1999(Jh, W, Jw, L, M, Xj, Hd):
+    return Jh + W + Jw + L + M + Xj + Hd
+
+def Suma2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
+    return Rj + J + Hc + Jm + Yy + St + Sc + Cl + Js
+
+def Promedio_Edad(Jy, Tl, Ty, Yt, K, Dy, T, Jh, W, Jw, L, M, Xj, Hd, Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
+    SumaTotal = Suma1994_1995(Jy, Tl, Ty, Yt, K, Dy, T) + Suma1997_1999(Jh, W, Jw, L, M, Xj, Hd) + Suma2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js)
+    return (SumaTotal/23)
+
+def Promedio_NCT127(Jy, Tl, Ty, Yt, Dy, Jh, W, Jw, M, Hc):
+    return (Jy + Tl + Ty + Yt + Dy + Jh + W + Jw + M + Hc)/10
+
+def Promedio_NCTDREAM(M, Rj, J, Hc, Jm, Cl, Js):
+    return (M + Rj + J + Hc + Jm + Cl + Js)/7
+
+def Promedio_WAYV (K, T, W, L, Xj, Hd, Yy):
+    return (K + T + W + L + Xj + Hd + Yy)/7
+
+def Inicio_Bienvenida():
+    
+
+    print("Buenas tardes usuario, para consultar nuestra información cheque el catalogo")
+    print(
+        """
+        Subdivisiones:
         
-    Miembros:
+        Miembros:
         
-    Musica:
+        Musica:
            
            """)
+          
+         
 
 
 
@@ -30,7 +64,6 @@ VARIABLES PARA EL INICIO
 """
 
 
-info_1 = input("¿Que zona del catalogo gustas explorar? (en minusculas) ")
 Subdivisiones = """
 NCT U, NCT DREAM, NCT 127 y WayV
 """
@@ -131,34 +164,6 @@ chenle = Chenle()
 class Jisung:
     edad = 19
 jisung = Jisung()
-"""
-****
-Funciones (AQUI ESTAN LAS OPERACIONES ;) )
-****
-
-"""    
-def Suma1994_1995(Jy, Tl, Ty, Yt, K, Dy, T):
-    return Jy + Tl + Ty + Yt + K + Dy + T
-#print("Suma ", Suma1994_1995(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, kun.edad, doyoung.edad, ten.edad))
-
-def Suma1997_1999(Jh, W, Jw, L, M, Xj, Hd):
-    return Jh + W + Jw + L + M + Xj + Hd
-
-def Suma2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
-    return Rj + J + Hc + Jm + Yy + St + Sc + Cl + Js
-
-def Promedio_Edad(Jy, Tl, Ty, Yt, K, Dy, T, Jh, W, Jw, L, M, Xj, Hd, Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
-    SumaTotal = Suma1994_1995(Jy, Tl, Ty, Yt, K, Dy, T) + Suma1997_1999(Jh, W, Jw, L, M, Xj, Hd) + Suma2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js)
-    return (SumaTotal/23)
-
-def Promedio_NCT127(Jy, Tl, Ty, Yt, Dy, Jh, W, Jw, M, Hc):
-    return (Jy + Tl + Ty + Yt + Dy + Jh + W + Jw + M + Hc)/10
-
-def Promedio_NCTDREAM(M, Rj, J, Hc, Jm, Cl, Js):
-    return (M + Rj + J + Hc + Jm + Cl + Js)/7
-
-def Promedio_WAYV (K, T, W, L, Xj, Hd, Yy):
-    return (K + T + W + L + Xj + Hd + Yy)/7
 
 
 """
@@ -168,7 +173,9 @@ Condiciones
 
 """
 
+Inicio_Bienvenida()
 
+info_1 = input("¿Que seccion quieres visitar? (en minusculas) ")
 if info_1 == "subdivisiones":
     print(Subdivisiones)
     info_2 = input("¿Quieres saber que miembros estan en cierta subdivision? (escribe el nombre de la subdivision en mayusculas) si no quieres saber pon NO ")
@@ -182,6 +189,7 @@ if info_1 == "subdivisiones":
         print(WAYV)
     else:
         print(Miembros)
+        
         info_3 = input("¿Quieres saber que miembro esta en que subdivision? (escribe el nombre del miembro con mayuscula al principio) ")
         if info_3 in NCTU:
             print("Si esta en NCT U el miembro " + info_3)
