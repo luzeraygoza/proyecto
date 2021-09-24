@@ -176,59 +176,79 @@ Condiciones
 Inicio_Bienvenida()
 
 info_1 = input("¿Que seccion quieres visitar? (en minusculas) ")
+
 if info_1 == "subdivisiones":
-    print(Subdivisiones)
-    info_2 = input("¿Quieres saber que miembros estan en cierta subdivision? (escribe el nombre de la subdivision en mayusculas) si no quieres saber pon NO ")
-    if info_2 == "NCT U":
-        print(NCTU)
-    elif info_2 == "NCT DREAM":
-        print(NCTDREAM)
-    elif info_2 == "NCT 127":
-        print(NCT127)
-    elif info_2 == "WAYV":
-        print(WAYV)
-    else:
-        print(Miembros)
+    bandera = True
+    while bandera:
+        print(Subdivisiones)
+        info_2 = input("¿Quieres saber que miembros estan en cierta subdivision? (escribe el nombre de la subdivision en mayusculas) si no quieres saber pon NO ")
+    
+        if info_2 == "NCT U":
+            print(NCTU)
+        elif info_2 == "NCT DREAM":
+            print(NCTDREAM)
+        elif info_2 == "NCT 127":
+            print(NCT127)
+        elif info_2 == "WAYV":
+            print(WAYV)
         
-        info_3 = input("¿Quieres saber que miembro esta en que subdivision? (escribe el nombre del miembro con mayuscula al principio) ")
-        if info_3 in NCTU:
-            print("Si esta en NCT U el miembro " + info_3)
-        if info_3 not in NCTU:
-            print("No esta en NCT U el miembro " + info_3)
-        if info_3 in NCTDREAM:
-            print("Si esta en NCT DREAM el miembro " + info_3)
-        if info_3 not in NCTDREAM:
-            print("No esta en NCT DREAM el miembro " + info_3)
-        if info_3 in NCT127:
-            print("Si esta en NCT 127 el miembro " + info_3)
-        if info_3 not in NCT127:
-            print("No esta en NCT 127 el miembro " + info_3)
-        if info_3 in WAYV:
-            print("Si esta en WAYV el miembro " + info_3)
-        if info_3 not in WAYV: 
-            print("No esta en WAYV el miembro " + info_3)
-            
-           
-        
+        else:
+            while bandera:
+       
+                info_3 = input("¿Quieres saber que miembro esta en que subdivision? (escribe SI o NO) ")
+                
+                
+                if info_3 == "SI":
+                    print(Miembros)
+                    info_5 = input("Escribe el nombre del miembro a saber (Mayuscula al principio) ")
+                    if info_3 in NCTU:
+                        print("Si esta en NCT U el miembro " + info_3)
+                    if info_3 not in NCTU:
+                        print("No esta en NCT U el miembro " + info_3)
+                    if info_3 in NCTDREAM:
+                        print("Si esta en NCT DREAM el miembro " + info_3)
+                    if info_3 not in NCTDREAM:
+                        print("No esta en NCT DREAM el miembro " + info_3)
+                    if info_3 in NCT127:
+                        print("Si esta en NCT 127 el miembro " + info_3)
+                    if info_3 not in NCT127:
+                        print("No esta en NCT 127 el miembro " + info_3)
+                    if info_3 in WAYV:
+                        print("Si esta en WAYV el miembro " + info_3)
+                    if info_3 not in WAYV: 
+                        print("No esta en WAYV el miembro " + info_3) 
+                else:
+                    while info_3 == "NO":
+                        bandera = False
+                        break
+                    print("¡Gracias por su busqueda! ^_^") 
+                    
 elif info_1 == "miembros": 
+    
     print(Miembros)
+   
     Promedio_Pregunta = input("¿Quieres saber el promedio de edad de NCT? (SI o NO) ")
     if Promedio_Pregunta == "SI":
         print("Promedio de todo NCT: ", Promedio_Edad(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, kun.edad, doyoung.edad, ten.edad, jaehyun.edad, winwin.edad, jungwoo.edad, lucas.edad, mark.edad, xiaojun.edad, hendery.edad,renjun.edad, jaemin.edad, haechan.edad, jaemin.edad, yangyang.edad, shotaro.edad, sungchan.edad, chenle.edad,jisung.edad ))
         print("Promedio de NCT 127: ", Promedio_NCT127(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, doyoung.edad, jaehyun.edad, winwin.edad, jungwoo.edad, mark.edad, haechan.edad ))
         print("Promedio de NCT DREAM: ", Promedio_NCTDREAM(mark.edad, renjun.edad, jeno.edad, haechan.edad, jaemin.edad, chenle.edad, jisung.edad))
         print("Promedio de WAYV", Promedio_WAYV(kun.edad, ten.edad, winwin.edad, lucas.edad, xiaojun.edad, hendery.edad, yangyang.edad))
+        print("¡Gracias por su busqueda! ^_^")
+    else:
+        print("¡Gracias por su busqueda! ^_^")
 else:
     print(Musica)
-    info_4 = input("¿Que sub-categoria quieres desplegar? albums, mini albums & singles, music videos (escribir todo en minuscula) ")
-    if info_4 == "albums":
-        print( """
+    
+    while True:
+        info_4 = input("¿Que sub-categoria quieres desplegar? albums, mini albums & singles, music videos (escribir todo en minuscula, para terminar escribir NO) ")
+        if info_4 == "albums":
+            print( """
         NCT 2018 EMPATHY, NCT#127 REGULAR-IRREGULAR, NCT#127 REGULATE (REPACKAGE), Awaken, NEO CITY: SEOUL, THE DREAM SHOW,
            NCT#127 Neo Zone, NCT#127 Neo Zone: The Final Round (REPACKAGE),Awaken The World, NCT RESONANCE Pt.2,
            Hot Sauce & Hello Future (REPACKAGE)
            """)
-    elif info_4 == "mini albums & singles":
-        print("""
+        elif info_4 == "mini albums & singles":
+            print("""
         The 7th sense, WITHOUT YOU, NCT#127, Chewing Gum, NCT#127 LIMITLESS, The First, NCT#127 CHERRY BOMB, Trigger the fever,
            JOY, Timeless,Radio Romance, Chain, Baby Don't Stop (Thai Version), We Go Up, Touch (Japanes Version), Up Next Session: NCT 127,
            DreamWorks Trolls X SM STATION, Candle Light, Let's Shut UP&DANCE, Don't need your love, So am I, Fireflies, The Vision,
@@ -238,13 +258,24 @@ else:
            iScreaM Vol.6: Make a Wish/ 90's Love Remix, Kick Back, Save, iScreaM Vol9: Hot Sauce Remixes, Maniac
 """)
  
-    else:
-        print(""" YESTODAY, The 7th Sense, WITHOUT YOU, Fire Truck, Chewing Gum, Switch, Limitless, My First and Last, Dream in a Dream,
+        elif info_4 == "music videos":
+            print(""" YESTODAY, The 7th Sense, WITHOUT YOU, Fire Truck, Chewing Gum, Switch, Limitless, My First and Last, Dream in a Dream,
            Cherry Bomb, We Young, JOY, Timeless, BOSS, Baby Don't Stop, GO, TOUCH, New Heroes, Black on Black, We Go Up, 
            Regular (English Version), Regular (Korean Version), Simon Says, Hair in the Air, Candle Light, Regular, Dream Launch,
            Let's Shut Up & Dance, Wakey-Wakey, Take Off, Superhuman, Highway to Heaven (English Version), Boom,
            Moonwalk, Love Talk, Coming Home, Kick it, Ridin', Punch, Turn Back Time, Bad Alive (English Version), From Home,
            Make A Wish, 90s Love, Work it, RESONANCE, gimme gimme, Kick Back, Everytime, Hot Sauce, Hello Future, Save """)
-
+       
+        else:
+            while info_4 == "NO":
+                pregunta = str(input("¿Quieres volver a explorar esta sección? (MAYUSCULAS) "))
+                if pregunta in ("SI", "NO"):
+                    break
+                print("invalido intenta otra vez con SI y NO")
+            if pregunta == "SI":
+                continue     
+            else:
+                print("¡Gracias por su busqueda! ^_^")
+                break
 
 
