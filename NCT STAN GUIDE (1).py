@@ -1,7 +1,7 @@
 """
 ********
 
-Programa de NCT 
+Programa de NCT  (preguntar sobre mayusculas en NCT Y CARACTERES CUANDO SE IMPRIMEN LOS MIMBROS Y TODO ESO y de los estatutos (que son))
 
 ********
 """
@@ -9,36 +9,46 @@ Programa de NCT
 
 """
 ****
-Funciones (AQUI ESTAN LAS OPERACIONES ;) )
+Funciones  
 ****
 
 """    
-def Suma1994_1995(Jy, Tl, Ty, Yt, K, Dy, T):
+def suma_1994_1995(Jy, Tl, Ty, Yt, K, Dy, T):
+    """ Suma las edades de los miembros entre los años de 1994 y 1995"""
     return Jy + Tl + Ty + Yt + K + Dy + T
 
-def Suma1997_1999(Jh, W, Jw, L, M, Xj, Hd):
+def suma_1997_1999(Jh, W, Jw, L, M, Xj, Hd):
+    """ Suma las edades de los miembros entre los años de 1997 y 1999"""
     return Jh + W + Jw + L + M + Xj + Hd
 
-def Suma2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
+def suma_2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
+    """ Suma las edades de los miembros entre los años de 2000 y 2002"""
     return Rj + J + Hc + Jm + Yy + St + Sc + Cl + Js
 
-def Promedio_Edad(Jy, Tl, Ty, Yt, K, Dy, T, Jh, W, Jw, L, M, Xj, Hd, Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js):
-    SumaTotal = Suma1994_1995(Jy, Tl, Ty, Yt, K, Dy, T) + Suma1997_1999(Jh, W, Jw, L, M, Xj, Hd) + Suma2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js)
-    return (SumaTotal/23)
+def promedio_edad(Jy, Tl, Ty, Yt, K, Dy, T, Jh, W, Jw, L, M, Xj, Hd, Rj,
+                  J, Hc, Jm, Yy, St, Sc, Cl, Js):
+    """Saca el promedio de edades de los 23 miembros"""
+    suma_total = (suma_1994_1995(Jy, Tl, Ty, Yt, K, Dy, T)
+                  + suma_1997_1999(Jh, W, Jw, L, M, Xj, Hd) +
+                  suma_2000_2002(Rj, J, Hc, Jm, Yy, St, Sc, Cl, Js))
+    
+    return (suma_total/23)
 
-def Promedio_NCT127(Jy, Tl, Ty, Yt, Dy, Jh, W, Jw, M, Hc):
+def promedio_nct_127(Jy, Tl, Ty, Yt, Dy, Jh, W, Jw, M, Hc):
     return (Jy + Tl + Ty + Yt + Dy + Jh + W + Jw + M + Hc)/10
 
-def Promedio_NCTDREAM(M, Rj, J, Hc, Jm, Cl, Js):
+def promedio_nct_dream(M, Rj, J, Hc, Jm, Cl, Js):
     return (M + Rj + J + Hc + Jm + Cl + Js)/7
 
-def Promedio_WAYV (K, T, W, L, Xj, Hd, Yy):
+def promedio_wayv (K, T, W, L, Xj, Hd, Yy):
     return (K + T + W + L + Xj + Hd + Yy)/7
 
-def Inicio_Bienvenida():
+def inicio_bienvenida():
     
 
-    print("Buenas tardes usuario, para consultar nuestra información cheque el catalogo")
+    print("Buenas tardes usuario")
+    print("para consultar nuestra información cheque el catalogo")
+    
     print(
         """
         Subdivisiones:
@@ -64,14 +74,16 @@ VARIABLES PARA EL INICIO
 """
 
 
-Subdivisiones = """
+subdivisiones = """
 NCT U, NCT DREAM, NCT 127 y WayV
 """
-Miembros = """
-Johnny, Taeil, Taeyong, Yuta, Kun, Doyoung, Ten, Jaehyun, WinWin, Jungwoo, Lucas,
-Mark, Xiaojun, Hendery, Renjun, Jeno, Haechan, Jaemin, YangYang, Shotaro, Sungchan, Chenle & Jisung
+miembros = """
+Johnny, Taeil, Taeyong, Yuta, Kun, Doyoung, Ten, Jaehyun, WinWin, Jungwoo,
+Lucas, Mark, Xiaojun, Hendery, Renjun, Jeno, Haechan, Jaemin, YangYang,
+Shotaro, Sungchan, Chenle & Jisung
         """
-Musica = """
+
+musica = """
 Albums, Mini Albums y Singles, Music Videos
 """
 
@@ -81,10 +93,17 @@ CONJUNTOS: SUBDIVISIONES
 ****
 """
 
-NCTU = {"Johnny", "Taeil", "Taeyong", "Yuta", "Kun", "Doyoung", "Ten", "Jaehyun", "Winwin", "Jungwoo", "Lucas", "Mark", "Xiaojun", "Hendery", "Renjun", "Jeno", "Haechan", "Jaemin", "Yangyang", "Shotaro", "Sungchan", "Chenle", "Jisung"}
-NCTDREAM = {"Mark", "Renjun", "Jeno", "Haechan", "Jaemin", "Chenle", "Jisung"}
-NCT127 = {"Johnny", "Taeil", "Taeyong", "Yuta", "Doyoung", "Jaehyun", "Winwin", "Jungwoo", "Mark", "Haechan"}
-WAYV = {"Kun", "Ten", "Winwin", "Lucas", "Xiaojun", "Hendery", "Yangyang"}
+nct_u = {"Johnny", "Taeil", "Taeyong", "Yuta", "Kun","Doyoung", "Ten",
+        "Jaehyun", "Winwin", "Jungwoo", "Lucas", "Mark", "Xiaojun", "Hendery",
+        "Renjun", "Jeno", "Haechan", "Jaemin", "Yangyang", "Shotaro",
+        "Sungchan", "Chenle", "Jisung"}
+
+nct_dream = {"Mark", "Renjun", "Jeno", "Haechan", "Jaemin", "Chenle", "Jisung"}
+
+nct_127 = {"Johnny", "Taeil", "Taeyong", "Yuta", "Doyoung", "Jaehyun",
+          "Winwin", "Jungwoo", "Mark", "Haechan"}
+
+wayv = {"Kun", "Ten", "Winwin", "Lucas", "Xiaojun", "Hendery", "Yangyang"}
 
 
 
@@ -95,75 +114,75 @@ classes
 ****
 
 """
-class Johnny:
+class johnny:
     edad = 26
-johnny = Johnny()
-class Taeil:
+johnny = johnny()
+class taeil:
     edad = 27
-taeil = Taeil()
-class Taeyong:
+taeil = taeil()
+class taeyong:
     edad = 26
-taeyong = Taeyong()
-class Yuta:
+taeyong = taeyong()
+class yuta:
     edad = 26
-yuta = Yuta()
-class Kun:
+yuta = yuta()
+class kun:
     edad = 25
-kun = Kun()
-class Doyoung:
+kun = kun()
+class doyoung:
     edad = 25
-doyoung = Doyoung()
-class Ten:
+doyoung = doyoung()
+class ten:
     edad = 25
-ten = Ten()
-class Jaehyun:
+ten = ten()
+class jaehyun:
     edad = 24
-jaehyun = Jaehyun()
-class Winwin:
+jaehyun = jaehyun()
+class winwin:
     edad = 24
-winwin = Winwin()
-class Jungwoo:
+winwin = winwin()
+class jungwoo:
     edad =23
-jungwoo = Jungwoo()
-class Lucas:
+jungwoo = jungwoo()
+class lucas:
     edad = 22
-lucas = Lucas()
-class Mark:
+lucas = lucas()
+class mark:
     edad = 22
-mark = Mark()
-class Xiaojun:
+mark = mark()
+class xiaojun:
     edad = 22
-xiaojun = Xiaojun()
-class Hendery:
+xiaojun = xiaojun()
+class hendery:
     edad = 22
-hendery = Hendery()
-class Renjun:
+hendery = hendery()
+class renjun:
     edad = 21
-renjun = Renjun()
-class Jeno:
+renjun = renjun()
+class jeno:
     edad = 21
-jeno = Jeno()
-class Haechan:
+jeno = jeno()
+class haechan:
     edad = 21
-haechan = Haechan()
-class Jaemin:
+haechan = haechan()
+class jaemin:
     edad = 21
-jaemin = Jaemin()
-class Yangyang:
+jaemin = jaemin()
+class yangyang:
     edad = 21
-yangyang = Yangyang()
-class Shotaro:
+yangyang = yangyang()
+class shotaro:
     edad = 21
-shotaro = Shotaro()
-class Sungchan:
+shotaro = shotaro()
+class sungchan:
     edad = 20
-sungchan = Sungchan()
-class Chenle:
+sungchan = sungchan()
+class chenle:
     edad = 20
-chenle = Chenle()
-class Jisung:
+chenle = chenle()
+class jisung:
     edad = 19
-jisung = Jisung()
+jisung = jisung()
 
 
 """
@@ -173,74 +192,74 @@ Condiciones
 
 """
 
-Inicio_Bienvenida()
+inicio_bienvenida()
 
 info_1 = input("¿Que seccion quieres visitar? (en minusculas) ")
 
 if info_1 == "subdivisiones":
     bandera = True
     while bandera:
-        print(Subdivisiones)
-        info_2 = input("¿Quieres saber que miembros estan en cierta subdivision? (escribe el nombre de la subdivision en mayusculas) si no quieres saber pon NO ")
+        print(subdivisiones)
+        info_2 = input("¿Quieres saber que miembros estan en que subdivision? si no quieres saber pon no ")
     
-        if info_2 == "NCT U":
-            print(NCTU)
-        elif info_2 == "NCT DREAM":
-            print(NCTDREAM)
-        elif info_2 == "NCT 127":
-            print(NCT127)
-        elif info_2 == "WAYV":
-            print(WAYV)
+        if info_2 == "nct u":
+            print(nct_u)
+        elif info_2 == "nct dream":
+            print(nct_dream)
+        elif info_2 == "nct 127":
+            print(nct_127)
+        elif info_2 == "wayv":
+            print(wayv)
         
         else:
             while bandera:
        
-                info_3 = input("¿Quieres saber que miembro esta en que subdivision? (escribe SI o NO) ")
+                info_3 = input("¿Quieres saber que miembro esta en que subdivision? (escribe si o no) ")
                 
                 
-                if info_3 == "SI":
-                    print(Miembros)
+                if info_3 == "si":
+                    print(miembros)
                     info_5 = input("Escribe el nombre del miembro a saber (Mayuscula al principio) ")
-                    if info_3 in NCTU:
-                        print("Si esta en NCT U el miembro " + info_3)
-                    if info_3 not in NCTU:
-                        print("No esta en NCT U el miembro " + info_3)
-                    if info_3 in NCTDREAM:
-                        print("Si esta en NCT DREAM el miembro " + info_3)
-                    if info_3 not in NCTDREAM:
-                        print("No esta en NCT DREAM el miembro " + info_3)
-                    if info_3 in NCT127:
-                        print("Si esta en NCT 127 el miembro " + info_3)
-                    if info_3 not in NCT127:
-                        print("No esta en NCT 127 el miembro " + info_3)
-                    if info_3 in WAYV:
-                        print("Si esta en WAYV el miembro " + info_3)
-                    if info_3 not in WAYV: 
-                        print("No esta en WAYV el miembro " + info_3) 
+                    if info_5 in nct_u:
+                        print("Si esta en NCT U el miembro " + info_5)
+                    if info_5 not in nct_u:
+                        print("No esta en NCT U el miembro " + info_5)
+                    if info_5 in nct_dream:
+                        print("Si esta en NCT DREAM el miembro " + info_5)
+                    if info_5 not in nct_dream:
+                        print("No esta en NCT DREAM el miembro " + info_5)
+                    if info_5 in nct_127:
+                        print("Si esta en NCT 127 el miembro " + info_5)
+                    if info_5 not in nct_127:
+                        print("No esta en NCT 127 el miembro " + info_5)
+                    if info_5 in wayv:
+                        print("Si esta en WAYV el miembro " + info_5)
+                    if info_5 not in wayv: 
+                        print("No esta en WAYV el miembro " + info_5) 
                 else:
-                    while info_3 == "NO":
+                    while info_3 == "no":
                         bandera = False
                         break
                     print("¡Gracias por su busqueda! ^_^") 
                     
 elif info_1 == "miembros": 
     
-    print(Miembros)
+    print(miembros)
    
-    Promedio_Pregunta = input("¿Quieres saber el promedio de edad de NCT? (SI o NO) ")
-    if Promedio_Pregunta == "SI":
-        print("Promedio de todo NCT: ", Promedio_Edad(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, kun.edad, doyoung.edad, ten.edad, jaehyun.edad, winwin.edad, jungwoo.edad, lucas.edad, mark.edad, xiaojun.edad, hendery.edad,renjun.edad, jaemin.edad, haechan.edad, jaemin.edad, yangyang.edad, shotaro.edad, sungchan.edad, chenle.edad,jisung.edad ))
-        print("Promedio de NCT 127: ", Promedio_NCT127(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, doyoung.edad, jaehyun.edad, winwin.edad, jungwoo.edad, mark.edad, haechan.edad ))
-        print("Promedio de NCT DREAM: ", Promedio_NCTDREAM(mark.edad, renjun.edad, jeno.edad, haechan.edad, jaemin.edad, chenle.edad, jisung.edad))
-        print("Promedio de WAYV", Promedio_WAYV(kun.edad, ten.edad, winwin.edad, lucas.edad, xiaojun.edad, hendery.edad, yangyang.edad))
+    promedio_pregunta = input("¿Quieres saber el promedio de edad de NCT? (si o no) ")
+    if promedio_pregunta == "si":
+        print("Promedio de todo NCT: ", promedio_edad(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, kun.edad, doyoung.edad, ten.edad, jaehyun.edad, winwin.edad, jungwoo.edad, lucas.edad, mark.edad, xiaojun.edad, hendery.edad,renjun.edad, jaemin.edad, haechan.edad, jaemin.edad, yangyang.edad, shotaro.edad, sungchan.edad, chenle.edad,jisung.edad ))
+        print("Promedio de NCT 127: ", promedio_nct_127(johnny.edad, taeil.edad, taeyong.edad, yuta.edad, doyoung.edad, jaehyun.edad, winwin.edad, jungwoo.edad, mark.edad, haechan.edad ))
+        print("Promedio de NCT DREAM: ", promedio_nct_dream(mark.edad, renjun.edad, jeno.edad, haechan.edad, jaemin.edad, chenle.edad, jisung.edad))
+        print("Promedio de WAYV", promedio_wayv(kun.edad, ten.edad, winwin.edad, lucas.edad, xiaojun.edad, hendery.edad, yangyang.edad))
         print("¡Gracias por su busqueda! ^_^")
     else:
         print("¡Gracias por su busqueda! ^_^")
 else:
-    print(Musica)
+    print(musica)
     
     while True:
-        info_4 = input("¿Que sub-categoria quieres desplegar? albums, mini albums & singles, music videos (escribir todo en minuscula, para terminar escribir NO) ")
+        info_4 = input("¿Que sub-categoria quieres desplegar? albums, mini albums & singles, music videos (para terminar escribir no) ")
         if info_4 == "albums":
             print( """
         NCT 2018 EMPATHY, NCT#127 REGULAR-IRREGULAR, NCT#127 REGULATE (REPACKAGE), Awaken, NEO CITY: SEOUL, THE DREAM SHOW,
@@ -267,12 +286,12 @@ else:
            Make A Wish, 90s Love, Work it, RESONANCE, gimme gimme, Kick Back, Everytime, Hot Sauce, Hello Future, Save """)
        
         else:
-            while info_4 == "NO":
+            while info_4 == "no":
                 pregunta = str(input("¿Quieres volver a explorar esta sección? (MAYUSCULAS) "))
-                if pregunta in ("SI", "NO"):
+                if pregunta in ("si", "no"):
                     break
-                print("invalido intenta otra vez con SI y NO")
-            if pregunta == "SI":
+                print("invalido intenta otra vez con si y no")
+            if pregunta == "si":
                 continue     
             else:
                 print("¡Gracias por su busqueda! ^_^")
