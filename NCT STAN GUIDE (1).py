@@ -58,7 +58,21 @@ def inicio_bienvenida():
         Musica:
            
            """)
-          
+def nct_visual_estetico(i):
+    if i == 0:
+        return "NCT U: "
+    elif i == 1:
+        return "NCT 127: "
+    elif i == 2:
+        return "NCT DREAM: "
+    elif i == 3:
+        return "WAYV: "
+def nct_visual(grupo):
+    i = 0 
+    for subdivision in grupo:
+        print(nct_visual_estetico(i))
+        print(subdivision)
+        i= 1 + i
          
 
 
@@ -86,6 +100,27 @@ Shotaro, Sungchan, Chenle & Jisung
 musica = """
 Albums, Mini Albums y Singles, Music Videos
 """
+albums = """
+        NCT 2018 EMPATHY, NCT#127 REGULAR-IRREGULAR, NCT#127 REGULATE (REPACKAGE), Awaken, NEO CITY: SEOUL, THE DREAM SHOW,
+           NCT#127 Neo Zone, NCT#127 Neo Zone: The Final Round (REPACKAGE),Awaken The World, NCT RESONANCE Pt.2,
+           Hot Sauce & Hello Future (REPACKAGE)
+           """
+mini_albums_singles = """
+        The 7th sense, WITHOUT YOU, NCT#127, Chewing Gum, NCT#127 LIMITLESS, The First, NCT#127 CHERRY BOMB, Trigger the fever,
+           JOY, Timeless,Radio Romance, Chain, Baby Don't Stop (Thai Version), We Go Up, Touch (Japanes Version), Up Next Session: NCT 127,
+           DreamWorks Trolls X SM STATION, Candle Light, Let's Shut UP&DANCE, Don't need your love, So am I, Fireflies, The Vision,
+           Take Off, NCT#127 WE ARE SUPERHUMAN, Highway to heaven (English version), We boom, When You're on the Blacklist of the Bullies,
+           The tale of Nodku, Take Over the Moon, Love Talk (English Version), STATION X LOVEs for Winter, Reload,
+           iScreaM Vol.1: Kick It (REMIX), iScreaM Vol.2: Ridin' (REMIXES), Turn Back Time, Bad Alive (English Version), RESONANCE,
+           iScreaM Vol.6: Make a Wish/ 90's Love Remix, Kick Back, Save, iScreaM Vol9: Hot Sauce Remixes, Maniac
+"""
+
+music_videos = """ YESTODAY, The 7th Sense, WITHOUT YOU, Fire Truck, Chewing Gum, Switch, Limitless, My First and Last, Dream in a Dream,
+           Cherry Bomb, We Young, JOY, Timeless, BOSS, Baby Don't Stop, GO, TOUCH, New Heroes, Black on Black, We Go Up, 
+           Regular (English Version), Regular (Korean Version), Simon Says, Hair in the Air, Candle Light, Regular, Dream Launch,
+           Let's Shut Up & Dance, Wakey-Wakey, Take Off, Superhuman, Highway to Heaven (English Version), Boom,
+           Moonwalk, Love Talk, Coming Home, Kick it, Ridin', Punch, Turn Back Time, Bad Alive (English Version), From Home,
+           Make A Wish, 90s Love, Work it, RESONANCE, gimme gimme, Kick Back, Everytime, Hot Sauce, Hello Future, Save """
 
 """
 ****
@@ -93,18 +128,19 @@ CONJUNTOS: SUBDIVISIONES
 ****
 """
 
-nct_u = {"Johnny", "Taeil", "Taeyong", "Yuta", "Kun","Doyoung", "Ten",
-        "Jaehyun", "Winwin", "Jungwoo", "Lucas", "Mark", "Xiaojun", "Hendery",
-        "Renjun", "Jeno", "Haechan", "Jaemin", "Yangyang", "Shotaro",
-        "Sungchan", "Chenle", "Jisung"}
+nct_u = ["Johnny", "Taeil", "Taeyong", "Yuta", "Kun", "Doyoung", "Ten",
+         "Jaehyun", "Winwin", "Jungwoo", "Lucas", "Mark", "Xiaojun",
+         "Hendery", "Renjun", "Jeno", "Haechan", "Jaemin",
+         "Yangyang", "Shotaro", "Sungchan", "Chenle", "Jisung"]
 
-nct_dream = {"Mark", "Renjun", "Jeno", "Haechan", "Jaemin", "Chenle", "Jisung"}
+nct_dream = ["Mark", "Renjun", "Jeno", "Haechan", "Jaemin", "Chenle", "Jisung"]
 
-nct_127 = {"Johnny", "Taeil", "Taeyong", "Yuta", "Doyoung", "Jaehyun",
-          "Winwin", "Jungwoo", "Mark", "Haechan"}
+nct_127 = ["Johnny", "Taeil", "Taeyong", "Yuta", "Doyoung", "Jaehyun",
+          "Winwin", "Jungwoo", "Mark", "Haechan"]
 
-wayv = {"Kun", "Ten", "Winwin", "Lucas", "Xiaojun", "Hendery", "Yangyang"}
+wayv = ["Kun", "Ten", "Winwin", "Lucas", "Xiaojun", "Hendery", "Yangyang"]
 
+nct =[nct_u, nct_127, nct_dream, wayv]
 
 
 
@@ -237,10 +273,15 @@ if info_1 == "subdivisiones":
                     if info_5 not in wayv: 
                         print("No esta en WAYV el miembro " + info_5) 
                 else:
-                    while info_3 == "no":
-                        bandera = False
-                        break
-                    print("¡Gracias por su busqueda! ^_^") 
+                    info_6 = input("¿Quieres una representación de NCT? (escribe si o no) ")
+                    if info_6 == "si":
+                        print(nct_visual(nct))
+                        bandera= False
+                    else:
+                        while info_6 == "no":
+                            bandera = False
+                            break
+                        print("¡Gracias por su busqueda! ^_^") 
                     
 elif info_1 == "miembros": 
     
@@ -261,33 +302,16 @@ else:
     while True:
         info_4 = input("¿Que sub-categoria quieres desplegar? albums, mini albums & singles, music videos (para terminar escribir no) ")
         if info_4 == "albums":
-            print( """
-        NCT 2018 EMPATHY, NCT#127 REGULAR-IRREGULAR, NCT#127 REGULATE (REPACKAGE), Awaken, NEO CITY: SEOUL, THE DREAM SHOW,
-           NCT#127 Neo Zone, NCT#127 Neo Zone: The Final Round (REPACKAGE),Awaken The World, NCT RESONANCE Pt.2,
-           Hot Sauce & Hello Future (REPACKAGE)
-           """)
+            print(albums)
         elif info_4 == "mini albums & singles":
-            print("""
-        The 7th sense, WITHOUT YOU, NCT#127, Chewing Gum, NCT#127 LIMITLESS, The First, NCT#127 CHERRY BOMB, Trigger the fever,
-           JOY, Timeless,Radio Romance, Chain, Baby Don't Stop (Thai Version), We Go Up, Touch (Japanes Version), Up Next Session: NCT 127,
-           DreamWorks Trolls X SM STATION, Candle Light, Let's Shut UP&DANCE, Don't need your love, So am I, Fireflies, The Vision,
-           Take Off, NCT#127 WE ARE SUPERHUMAN, Highway to heaven (English version), We boom, When You're on the Blacklist of the Bullies,
-           The tale of Nodku, Take Over the Moon, Love Talk (English Version), STATION X LOVEs for Winter, Reload,
-           iScreaM Vol.1: Kick It (REMIX), iScreaM Vol.2: Ridin' (REMIXES), Turn Back Time, Bad Alive (English Version), RESONANCE,
-           iScreaM Vol.6: Make a Wish/ 90's Love Remix, Kick Back, Save, iScreaM Vol9: Hot Sauce Remixes, Maniac
-""")
+            print(mini_albums_singles)
  
         elif info_4 == "music videos":
-            print(""" YESTODAY, The 7th Sense, WITHOUT YOU, Fire Truck, Chewing Gum, Switch, Limitless, My First and Last, Dream in a Dream,
-           Cherry Bomb, We Young, JOY, Timeless, BOSS, Baby Don't Stop, GO, TOUCH, New Heroes, Black on Black, We Go Up, 
-           Regular (English Version), Regular (Korean Version), Simon Says, Hair in the Air, Candle Light, Regular, Dream Launch,
-           Let's Shut Up & Dance, Wakey-Wakey, Take Off, Superhuman, Highway to Heaven (English Version), Boom,
-           Moonwalk, Love Talk, Coming Home, Kick it, Ridin', Punch, Turn Back Time, Bad Alive (English Version), From Home,
-           Make A Wish, 90s Love, Work it, RESONANCE, gimme gimme, Kick Back, Everytime, Hot Sauce, Hello Future, Save """)
+            print(music_videos)
        
         else:
             while info_4 == "no":
-                pregunta = str(input("¿Quieres volver a explorar esta sección? (MAYUSCULAS) "))
+                pregunta = str(input("¿Quieres volver a explorar esta sección? "))
                 if pregunta in ("si", "no"):
                     break
                 print("invalido intenta otra vez con si y no")
