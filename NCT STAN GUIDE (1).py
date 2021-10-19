@@ -9,7 +9,7 @@ para poder comprender la dinamica del grupo.
 
 Se usaron classes, las cuales sirven para darles cualidades/caracteristicas a un objeto; en este caso fueron personas.
 https://www.w3schools.com/python/python_classes.asp
-
+Esto se encuentra de la linea 457 a 525
 ********
 """
 
