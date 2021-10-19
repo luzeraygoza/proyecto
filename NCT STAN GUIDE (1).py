@@ -1,32 +1,14 @@
 """
 ********
-
-CORRECIONES:
-Sub-Competencia: 
-    componente: aplica estructuras condicionales para resolver un problema
-
-Error original: Habia puesto nombre de funciones y variables con mayusculas y
-mis lineas tenian mas de 79 caracteres
-
-def SUMA_1994_1995(Jy, Tl, Ty, Yt, K, Dy, T):
-    
-    return Jy + Tl + Ty + Yt + K + Dy + T
-    
-
-Cambio realizado: Corregí los nombres de variables y funciones
-
-def suma_1994_1995(Jy, Tl, Ty, Yt, K, Dy, T):
-    
-    return Jy + Tl + Ty + Yt + K + Dy + T
-
-
-
-Líneas de código donde se ve la corrección: todo el codigo
-
-
-Programa de NCT
+Luz Emilia Raygoza Murguía
+A01635441
+Programa de NCT: NCT STAN GUIDE
 Es un menu que despliega la información a interes sobre NCT,
 para poder comprender la dinamica del grupo.
+
+
+Se usaron classes, las cuales sirven para darles cualidades/caracteristicas a un objeto; en este caso fueron personas.
+https://www.w3schools.com/python/python_classes.asp
 
 ********
 """
@@ -272,8 +254,11 @@ def seccion_subdivisiones(subdivisiones, sub1, sub2, sub3, sub4):
     
     bandera = True
     while bandera:
+        
         print(subdivisiones)
-        print("Escribe nombre de subdivision")
+        
+        print("Escribe nombre de subdivision o no para continuar")
+        
         info_2 = input("¿Quieres saber quien esta en cierta subdivision? ")
         
     
@@ -290,10 +275,11 @@ def seccion_subdivisiones(subdivisiones, sub1, sub2, sub3, sub4):
             while bandera:
        
                 info_3 = input("¿Quieres saber en que subdivision esta alguien? ")
-                
+               
                 
                 if info_3 == "si":
                     print(miembros)
+                    
                     info_5 = input("Escribe el nombre\
 (Mayuscula al principio) ")
                     if info_5 in sub1:
