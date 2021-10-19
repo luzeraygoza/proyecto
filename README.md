@@ -32,13 +32,15 @@ De manera que este programa inicialmente se enfocara en los miembros, subdivisio
       
       Miembros en que subdivision estan
       
+      Representacion visual de NCT
+      
       
     Miembros
-      23 miembros + nuevos mimbros (NCT HOLLYWOOD)
+      23 miembros + nuevos miembros (NCT HOLLYWOOD)
       
       Promedio de edad de cada subdivision
       
-        Fancams sagradas
+        
         
         
     Musica
